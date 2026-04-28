@@ -1,8 +1,5 @@
 const navItems = [
   { icon: '▦', label: 'Dashboard', active: true },
-  { icon: '₹', label: 'Expenses' },
-  { icon: '↗', label: 'Analytics' },
-  { icon: '◎', label: 'Settings' },
 ]
 
 export default function Sidebar() {
