@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d0f14;
+  --sidebar: #13161e;
+  --surface: #181c26;
+  --surface-2: #1e2333;
+  --border: #252c3e;
+  --text: #eef0f6;
+  --text-muted: #7b85a0;
+  --text-dim: #444e66;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Card accent gradients */
+  --card-teal:   linear-gradient(135deg, #0ecfb0 0%, #0891b2 100%);
+  --card-yellow: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  --card-pink:   linear-gradient(135deg, #e879f9 0%, #a855f7 100%);
+  --card-blue:   linear-gradient(135deg, #60a5fa 0%, #6366f1 100%);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+input, select, textarea, button { font-family: var(--font-sans); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+.fade-up { animation: fadeUp 0.3s ease forwards; }
+.mono { font-family: var(--font-mono); }
+
+/* Sidebar nav item hover */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.nav-item:hover { background: var(--surface-2); color: var(--text); }
+.nav-item.active { background: var(--surface-2); color: var(--text); }
+
+/* Stat card hover */
+.stat-card {
+  border-radius: 16px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+/* Table row hover */
+.expense-row { transition: background 0.12s; }
+.expense-row:hover { background: var(--surface-2) !important; }
+
+/* Input focus ring */
+.field-input:focus {
+  outline: none;
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
