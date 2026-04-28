@@ -39,7 +39,7 @@ export default function App() {
 
   // Get today's date greeting
   const hour = new Date().getHours()
-  const greeting = hour < 12 ? 'Hi! Good morning,' : hour < 17 ? 'Hi! Good afternoon,' : 'Hi! Good evening,'
+  const greeting = hour < 12 ? 'Hi! Good morning' : hour < 17 ? 'Hi! Good afternoon' : 'Hi! Good evening'
 
   return (
     <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', background: 'var(--bg)' }}>
@@ -59,7 +59,7 @@ export default function App() {
         }}>
           <div>
             <span style={{ fontSize: '16px', fontWeight: 600, color: 'var(--text)' }}>
-              {greeting} Lavanya
+              {greeting} 
             </span>
             <span style={{ marginLeft: '8px', fontSize: '12px', color: 'var(--text-dim)' }}>
               Here's your spending overview
