@@ -82,3 +82,9 @@ Input validation lives in `src/middleware/validate.js`, separate from route logi
 
 ---
 
+## ⚠️ Trade-offs
+
+- No authentication (single-user focus)
+- No pagination (returns all expenses)
+- No edit/delete functionality
+- SQLite not scalable for large production systems
