@@ -1,0 +1,13 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore local database and logs
+*.db
+*.db-journal
+npm-debug.log*
+
+# Ignore environment variables
+.env
+
+# Ignore frontend build files
+dist/
